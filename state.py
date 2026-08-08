@@ -2,7 +2,7 @@
 import sys
 import sqlite3
 import os
-from datetime import datetime
+from datetime import timezone, datetime
 
 DB_PATH = os.path.expanduser("~/.termux_master/state.db")
 
@@ -27,7 +27,7 @@ def record_start(dag_id):
     init_db()
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    now = datetime.utcnow().isoformat() + "Z"
+    now = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
     cur.execute("INSERT INTO runs (dag_id, status, start_time) VALUES (?, 'running', ?)", (dag_id, now))
     run_id = cur.lastrowid
     conn.commit()
@@ -38,7 +38,7 @@ def record_finish(run_id, status, error_msg=None):
     init_db()
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    now = datetime.utcnow().isoformat() + "Z"
+    now = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
     cur.execute("UPDATE runs SET status = ?, end_time = ?, error_message = ? WHERE run_id = ?", 
                 (status, now, error_msg, run_id))
     conn.commit()
