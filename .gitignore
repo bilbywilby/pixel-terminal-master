@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.db
+
+# Logs
+*.log
+logs/
+
+# Runtime storage (don't track secrets/sessions)
+.env
+.env.*
+envs/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

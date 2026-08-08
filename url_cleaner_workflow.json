@@ -1,0 +1,53 @@
+{
+  "id": "url_sanitizer_prod",
+  "name": "Production URL Sanitizer",
+  "version": "0.2.0",
+  "description": "Strips tracking parameters from social/ad URLs (fbclid, utm_*, gclid, etc.)",
+  "command": "python3 /home/droid/pixel-terminal-master/run_fixupxer.py",
+  "dag_type": "pipeline",
+  "input": {
+    "source": "stdin",
+    "format": "lines"
+  },
+  "output": {
+    "destination": "stdout",
+    "format": "lines",
+    "fallback_log": "$MASTER_STORAGE/logs/url_sanitizer_prod.log"
+  },
+  "dependencies": {
+    "python_modules": ["fixupxer"],
+    "system_tools": ["jq", "sqlite3", "python3"]
+  },
+  "rules": [
+    {
+      "pattern_id": "social_trackers",
+      "match_pattern": "facebook.com",
+      "strip_params": ["fbclid", "utm_source", "utm_medium", "utm_term", "utm_content"]
+    },
+    {
+      "pattern_id": "ad_platforms",
+      "match_pattern": "google.com",
+      "strip_params": ["gclid", "gclsrc", "utm_campaign", "utm_source", "utm_medium"]
+    },
+    {
+      "pattern_id": "email_clients",
+      "match_pattern": "gmail.com",
+      "strip_params": ["ved", "ei", "ust", "og"]
+    },
+    {
+      "pattern_id": "twitter_trackers",
+      "match_pattern": "twitter.com|t.co",
+      "strip_params": ["s", "ref_src", "ref_url"]
+    }
+  ],
+  "settings": {
+    "timeout_seconds": 30,
+    "retry_count": 0,
+    "preserve_query_order": true
+  },
+  "metadata": {
+    "author": "droid",
+    "created": "2026-08-08",
+    "last_modified": "2026-08-08T13:55:00Z"
+  }
+}
