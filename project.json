@@ -4,16 +4,16 @@
     "name": "Termux Master CLI Engine",
     "version": "0.2.0",
     "description": "POSIX shell-based workflow orchestrator with SQLite state tracking, DAG execution, and automated CI/CD for Termux/Linux environments",
-    "author": "droid",
+    "author": "bilbywilby",
     "created": "2026-08-08T15:21:53Z",
     "license": "MIT"
   },
   
   "repository": {
     "type": "git",
-    "url": "git@github.com:droid/pixel-terminal-master.git",
+    "url": "https://github.com/bilbywilby/pixel-terminal-master.git",
     "branch": "main",
-    "remote_origin": "git@github.com:droid/pixel-terminal-master.git"
+    "remote_origin": "https://github.com/bilbywilby/pixel-terminal-master.git"
   },
   
   "runtime": {
