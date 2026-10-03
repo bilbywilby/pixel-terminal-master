@@ -1,0 +1,287 @@
+                     Option Setting Panel
+              (w3m version w3m/0.5.3+git20230121)
+
+[External Viewer Setup]
+
+Display Settings
+
+Tab width in characters            [8                   ]
+Indent for HTML rendering          [4                   ]
+Number of pixels per character     [7                   ]
+(4.0...32.0)
+Number of pixels per line          [14                  ]
+(4.0...64.0)
+Render frames automatically        ( )YES  (*)NO
+Use _self as default target        ( )YES  (*)NO
+Open link on new tab if target is  ( )YES  (*)NO
+_blank or _new
+Open download list panel on new    ( )YES  (*)NO
+tab
+Display link URL automatically     ( )YES  (*)NO
+Display link numbers               ( )YES  (*)NO
+Display decoded URL                ( )YES  (*)NO
+Display current line number        ( )YES  (*)NO
+Use external program for directory (*)YES  ( )NO
+listing
+URL of directory listing command   [file:///$LIB/dirlist]
+Enable dictionary lookup through   (*)YES  ( )NO
+CGI
+URL of dictionary lookup command   [file:///$LIB/w3mdict]
+Display file names in multi-column ( )YES  (*)NO
+format
+Use ASCII equivalents to display   ( )YES  (*)NO
+entities
+Character type for border of table [charset specific    ]
+and menu
+Display table borders, ignore      ( )YES  (*)NO
+value of BORDER
+Disable center alignment           ( )YES  (*)NO
+Fold lines in TEXTAREA             ( )YES  (*)NO
+Display INS, DEL, S and STRIKE     [use tag]
+element
+Display link name for images       (*)YES  ( )NO
+lacking ALT
+Display unseen objects (e.g.       (*)YES  ( )NO
+bgimage tag)
+Display inline images              (*)YES  ( )NO
+Display pseudo-ALTs for inline     (*)YES  ( )NO
+images with no ALT or TITLE string
+Load inline images automatically   (*)YES  ( )NO
+Maximum processes for parallel     [4                   ]
+image loading
+Use external image viewer          (*)YES  ( )NO
+Scale of image (%)                 [100                 ]
+Inline image display method        [external command   ]
+External command to display image  [w3mimgdisplay       ]
+Use link list of image map         (*)YES  ( )NO
+Fold lines of plain text file      ( )YES  (*)NO
+Show line numbers                  ( )YES  (*)NO
+Show search string                 (*)YES  ( )NO
+Move cursor to top line when going ( )YES  (*)NO
+to label
+Move cursor to top line when       ( )YES  (*)NO
+moving to next page
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Color Settings
+
+Display with color                 (*)YES  ( )NO
+Use high-intensity colors          ( )YES  (*)NO
+Color of normal character          [terminal]
+Color of anchor                    [blue    ]
+Color of image link                [green   ]
+Color of form                      [red     ]
+Color of mark                      [cyan    ]
+Color of background                [terminal]
+Enable coloring of active link     ( )YES  (*)NO
+Color of currently active link     [cyan    ]
+Use visited link color             ( )YES  (*)NO
+Color of visited link              [magenta ]
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Miscellaneous Settings
+
+Number of remembered lines when   [10000               ]
+used as a pager
+Use URL history                   (*)YES  ( )NO
+Number of remembered URL          [100                 ]
+Save URL history                  (*)YES  ( )NO
+Confirm when quitting with q      (*)YES  ( )NO
+Close tab if buffer is last when  ( )YES  (*)NO
+back
+Enable mark operations            ( )YES  (*)NO
+Enable Emacs-style line editing   ( )YES  (*)NO
+Space key triggers file           ( )YES  (*)NO
+completion while editing URLs
+Enable vi-like numeric prefix     ( )YES  (*)NO
+Treat URL-like strings as links   ( )YES  (*)NO
+in all pages
+Wrap search                       ( )YES  (*)NO
+Search case-insensitively         (*)YES  ( )NO
+Enable Migemo (Roma-ji search)    (*)YES  ( )NO
+Migemo command                    [cmigemo -q -d /usr/s]
+Enable mouse                      ( )YES  (*)NO
+Scroll in reverse direction of    ( )YES  (*)NO
+mouse drag
+Behavior of wheel scroll speed    [B:fixed speed              ]
+(A only)Scroll by # (%) of screen [30                  ]
+(B only)Scroll by # lines         [5                   ]
+Free memory of undisplayed        (*)YES  ( )NO
+buffers
+Decode Content-Transfer-Encoding  ( )YES  (*)NO
+when saving
+Uncompress compressed data        ( )YES  (*)NO
+automatically when downloading
+Preserve timestamp when saving    (*)YES  ( )NO
+keymap file                       [keymap              ]
+                                  [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Directory Settings
+
+Directory corresponding to /       [                    ]
+(document root)
+Directory corresponding to /~user  [                    ]
+Directory corresponding to /       [                    ]
+cgi-bin
+Index file for directories         [                    ]
+Directory for temporary files      [                    ]
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+External Program Settings
+
+List of mime.types    [~/.w3m/mime.types, /]
+files
+List of mailcap files [~/.w3m/mailcap, /etc]
+List of urimethodmap  [~/.w3m/urimethodmap,]
+files
+Editor                [sensible-editor     ]
+How to call Mailer
+for mailto URLs with  [ignore options and use only the address]
+options
+Mailer                [xdg-open mailto:%s  ]
+External browser      [sensible-browser    ]
+2nd external browser  [                    ]
+3rd external browser  [                    ]
+4th external browser  [                    ]
+5th external browser  [                    ]
+6th external browser  [curl -L -O -C - %s &]
+7th external browser  [wget -c             ]
+8th external browser  [url=%s && printf %s ]
+9th external browser  [xdg-open %s &       ]
+Run external viewer   (*)YES  ( )NO
+in the background
+Use LESSOPEN          ( )YES  (*)NO
+                      [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Network Settings
+
+Password file                      [~/.w3m/passwd       ]
+Disable secret file security check ( )YES  (*)NO
+Password for anonymous FTP (your   [anonymous@          ]
+mail address)
+Generate domain part of password   ( )YES  (*)NO
+for FTP
+File for setting form on loading   [~/.w3m/pre_form     ]
+File for preferences for each site [~/.w3m/siteconf     ]
+User-Agent identification string   [                    ]
+Suppress `Referer:' header         ( )YES  (*)NO
+Exclude pathname and query string
+from `Referer:' header when cross  (*)YES  ( )NO
+domain communication
+Accept-Language header             [en;q=1.0            ]
+Accept-Encoding header             [gzip, compress, bzip]
+Accept header                      [text/html, text/*;q=]
+Treat argument without scheme as   (*)YES  ( )NO
+URL
+Prepend http:// to URL             (*)YES  ( )NO
+automatically
+Default value for open-URL command [current URL]
+Number of redirections to follow   [10                  ]
+Enable processing of meta-refresh  ( )YES  (*)NO
+tag
+Restrict connections only to       ( )YES  (*)NO
+localhost
+Order of name resolution           [unspecified]
+News server                        [                    ]
+Mode of news server                [                    ]
+Number of news messages            [50                  ]
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Proxy Settings
+
+Use proxy                          (*)YES  ( )NO
+URL of HTTP proxy host             [                    ]
+URL of HTTPS proxy host            [                    ]
+URL of GOPHER proxy host           [                    ]
+URL of FTP proxy host              [                    ]
+Domains to be accessed directly    [                    ]
+(no proxy)
+Check noproxy by network address   ( )YES  (*)NO
+Disable cache                      ( )YES  (*)NO
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SSL Settings
+
+List of forbidden SSL methods (2:
+SSLv2, 3: SSLv3, t: TLSv1.0, 5:    [2, 3, t, 5          ]
+TLSv1.1, 6: TLSv1.2, 7: TLSv1.3)
+Minimum SSL version (all, TLSv1.0, [                    ]
+TLSv1.1, TLSv1.2, or TLSv1.3)
+SSL ciphers for TLSv1.2 and below  [                    ]
+(e.g. DEFAULT:@SECLEVEL=2)
+Perform SSL server verification    (*)YES  ( )NO
+PEM encoded certificate file of    [                    ]
+client
+PEM encoded private key file of    [                    ]
+client
+Path to directory for PEM encoded  [/etc/ssl/certs      ]
+certificates of CAs
+File consisting of PEM encoded     [                    ]
+certificates of CAs
+Use default locations for PEM      (*)YES  ( )NO
+encoded certificates of CAs
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cookie Settings
+
+Enable cookie processing           (*)YES  ( )NO
+Print a message when receiving a   ( )YES  (*)NO
+cookie
+Accept cookies                     (*)YES  ( )NO
+Action to be taken on invalid      [discard]
+cookie
+Domains to reject cookies from     [                    ]
+Domains to accept cookies from     [                    ]
+Domains to avoid [wrong number of  [                    ]
+dots]
+                                   [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Charset Settings
+
+Display charset                  [Unicode (UTF-8)             ]
+Default document charset         [Unicode (UTF-8)             ]
+Automatic charset detection when [ON           ]
+loading
+System charset                   [Unicode (UTF-8)             ]
+System charset follows locale    (*)YES  ( )NO
+(LC_CTYPE)
+Output halfdump with display     ( )YES  (*)NO
+charset
+Use multi-column characters      (*)YES  ( )NO
+Use combining characters         (*)YES  ( )NO
+Use double width for some        ( )YES  (*)NO
+Unicode characters
+Use Unicode language tags        (*)YES  ( )NO
+Charset conversion using Unicode (*)YES  ( )NO
+map
+Charset conversion when loading  ( )YES  (*)NO
+Adjust search string for         (*)YES  ( )NO
+document charset
+Fix character width when         (*)YES  ( )NO
+converting
+Use GB 12345 Unicode map instead ( )YES  (*)NO
+of GB 2312's
+Use JIS X 0201 Roman for         ( )YES  (*)NO
+ISO-2022-JP
+Use JIS C 6226:1978 for          ( )YES  (*)NO
+ISO-2022-JP
+Use JIS X 0201 Katakana          ( )YES  (*)NO
+Use JIS X 0212:1990              ( )YES  (*)NO
+(Supplemental Kanji)
+Use JIS X 0213:2000 (2000JIS)    ( )YES  (*)NO
+Strict ISO-2022-JP/KR/CN         (*)YES  ( )NO
+Treat 4 bytes char. of GB18030   ( )YES  (*)NO
+as Unicode
+Simple Preserve space            ( )YES  (*)NO
+                                 [OK]
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                
+
