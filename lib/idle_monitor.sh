@@ -42,4 +42,4 @@ cleanup_idle_monitor() {
     kill "$IDLE_MONITOR_PID" 2>/dev/null || true
     rm -f "$IDLE_FILE" "$LAST_ACTIVITY_FILE"
 }
-# trap cleanup_idle_monitor EXIT  # CHAINED BELOW
+trap cleanup_idle_monitor EXIT
