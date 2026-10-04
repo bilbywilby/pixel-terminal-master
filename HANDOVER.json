@@ -1,0 +1,831 @@
+{
+  "schema": "pixel-terminal-handover/v1",
+  "generated_at_utc": "2026-10-04T02:46:01Z",
+  "generated_by": "generate_handover.py",
+  "operator": "bilbywilby",
+  "purpose": "Technical handover for pixel-terminal-master maintenance and recovery",
+  "repository": {
+    "path": "/home/droid/pixel-terminal-master",
+    "git_dir": "/home/droid/pixel-terminal-master/.git",
+    "head": "1387f271e15eaeb1adf5ebd373ffd533480a203b",
+    "short_head": "1387f27",
+    "branch": "main",
+    "upstream": "origin/main",
+    "status": "## main...origin/main",
+    "working_tree_clean": true,
+    "diff_stat": "",
+    "remotes": [
+      {
+        "name": "origin",
+        "url": "git@github.com:bilbywilby/pixel-terminal-master.git",
+        "kind": "fetch"
+      },
+      {
+        "name": "origin",
+        "url": "git@github.com:bilbywilby/pixel-terminal-master.git",
+        "kind": "push"
+      }
+    ],
+    "recent_commits": [
+      "1387f27 | 2026-10-04T02:36:13Z | Carter the Duck | OPSEC: Resolve hardcoded PIDs and restore idle_monitor traps",
+      "e129a38 | 2026-10-03T22:46:10Z | Carter the Duck | Fix: removed hardcoded kill, disabled idle monitor trap chaining",
+      "f7b6bf4 | 2026-09-02T23:46:49Z | bilbywilby | Remove unreferenced cross-project files (fixupxer, clip cleaner)",
+      "68a8271 | 2026-09-02T09:59:42Z | bilbywilby | fix: track Vid2gif directory files directly instead of gitlink",
+      "e6e9ee5 | 2026-09-02T09:57:11Z | bilbywilby | feat: add terminal addon extensions and installation scripts",
+      "6145a94 | 2026-08-08T18:20:46Z | bilbywilby | fix: correct stale remote/author metadata, rename .json to project.json",
+      "3fa421a | 2026-08-08T17:43:47Z | bilbywilby | message",
+      "702d34d | 2026-08-08T17:42:24Z | bilbywilby | Merge branch 'main' of https://github.com/bilbywilby/pixel-terminal-master",
+      "5bb42b7 | 2026-08-08T12:19:55-04:00 | bilbywilby | Enhance README with project details and instructions",
+      "b0c359c | 2026-08-08T11:40:20-04:00 | bilbywilby | Add initial configuration for Termux Master CLI Engine"
+    ],
+    "branches": [
+      "* main                1387f27 [origin/main] OPSEC: Resolve hardcoded PIDs and restore idle_monitor traps",
+      "  remotes/origin/main 1387f27 OPSEC: Resolve hardcoded PIDs and restore idle_monitor traps"
+    ],
+    "tracked_file_count": 48,
+    "untracked_or_changed": []
+  },
+  "environment": {
+    "user": "droid",
+    "home": "/home/droid",
+    "cwd_when_generated": "/home/droid",
+    "hostname": "debian",
+    "system": "Linux",
+    "release": "6.12.92-android16-6-g4e585dd7f3b7-ab16266940-4k",
+    "machine": "aarch64",
+    "platform": "Linux-6.12.92-android16-6-g4e585dd7f3b7-ab16266940-4k-aarch64-with-glibc2.41",
+    "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+    "bash": "GNU bash, version 5.2.37(1)-release (aarch64-unknown-linux-gnu)",
+    "git": "git version 2.47.3",
+    "tac_available": true,
+    "commands": {
+      "bash": "/usr/bin/bash",
+      "python3": "/usr/bin/python3",
+      "git": "/usr/bin/git",
+      "tac": "/usr/bin/tac",
+      "grep": "/usr/bin/grep",
+      "sed": "/usr/bin/sed",
+      "awk": "/usr/bin/awk",
+      "timeout": "/usr/bin/timeout",
+      "w3m": "/usr/bin/w3m"
+    }
+  },
+  "file_inventory": {
+    "count": 49,
+    "files": [
+      {
+        "path": ".gitignore",
+        "bytes": 232,
+        "mode": "0o644",
+        "sha256": "88737b0049ce452abd90950888e8ab4901f674f672929d6063a8e59ac54d8f7c"
+      },
+      {
+        "path": ".heartbeat",
+        "bytes": 0,
+        "mode": "0o644",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "; do",
+        "bytes": 11247,
+        "mode": "0o644",
+        "sha256": "da43d894518b605319e34560e22c290c03d3978fbf0fc41ebd99e84c240afd14"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 1067,
+        "mode": "0o644",
+        "sha256": "dda54cc422609d36e7f1f2bfb1a1d93d85f3ab8029f2e12e5e9483a5130e1c21"
+      },
+      {
+        "path": "README.md",
+        "bytes": 9574,
+        "mode": "0o644",
+        "sha256": "6f528786b49c6b99d80336c448e0ea7ff2fb8adf0660b37d7b4143c746c424f4"
+      },
+      {
+        "path": "T_MOD=\"$CURRENT_MOD\"",
+        "bytes": 11247,
+        "mode": "0o644",
+        "sha256": "da43d894518b605319e34560e22c290c03d3978fbf0fc41ebd99e84c240afd14"
+      },
+      {
+        "path": "T_MOD=$(stat -c %Y \"$TARGET\")",
+        "bytes": 0,
+        "mode": "0o644",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "Vid2gif/CHANGELOG.md",
+        "bytes": 841,
+        "mode": "0o644",
+        "sha256": "e8c25bc7bb595b258a51554f7cf610f697b4ca08ce04ad4181916261a02729ce"
+      },
+      {
+        "path": "Vid2gif/LICENSE",
+        "bytes": 1067,
+        "mode": "0o644",
+        "sha256": "dda54cc422609d36e7f1f2bfb1a1d93d85f3ab8029f2e12e5e9483a5130e1c21"
+      },
+      {
+        "path": "Vid2gif/README.md",
+        "bytes": 2635,
+        "mode": "0o644",
+        "sha256": "6a9f40c2cce4078bc7399c5360bd067b636866b4a5c717bac87f6e3dfe6a7c49"
+      },
+      {
+        "path": "Vid2gif/fix_repo.sh",
+        "bytes": 3310,
+        "mode": "0o755",
+        "sha256": "c5b40e040926bca2a8fc8106c8ee5ce61ae8c8a6c5e4380c857a8990d65325ae"
+      },
+      {
+        "path": "Vid2gif/git_push.py",
+        "bytes": 1586,
+        "mode": "0o755",
+        "sha256": "b8aa0575a79c74427feffc5ec45027fa002eacea9eb7e78025964c3f5392b035"
+      },
+      {
+        "path": "Vid2gif/vid2gif.sh",
+        "bytes": 9641,
+        "mode": "0o755",
+        "sha256": "52e45f14ed4785b004fbdc761221c3ccc4b8fe13b96f89ab596cfc877c8f1f6e"
+      },
+      {
+        "path": "addons/10_wg_rotator.sh",
+        "bytes": 122,
+        "mode": "0o755",
+        "sha256": "3d9a16a7fcef3939b34dd67aac90e5ffd54275069aa1ce4133840e1698c5c9f4"
+      },
+      {
+        "path": "addons/1_webhook.py",
+        "bytes": 300,
+        "mode": "0o755",
+        "sha256": "15e10b6c37afee3cb06f0d91869cb1db90fc9a6b74ed4d4f5f443bac72e7b636"
+      },
+      {
+        "path": "addons/2_scheduler.sh",
+        "bytes": 666,
+        "mode": "0o755",
+        "sha256": "8719164c42682ccbbd7376c30901956c0e39e8a34e9012fec51939ba29e87c82"
+      },
+      {
+        "path": "addons/3_resource_gate.sh",
+        "bytes": 542,
+        "mode": "0o755",
+        "sha256": "5b9f6fe2dc82201e11b5bcd0901298aee51af54406c499346effee48888edcb7"
+      },
+      {
+        "path": "addons/4_archiver.sh",
+        "bytes": 117,
+        "mode": "0o755",
+        "sha256": "2e5ea1f42279b1f544ae6ca64d8334def474c65f5b6557d414cc1ca60a18b27d"
+      },
+      {
+        "path": "addons/5_dep_injector.sh",
+        "bytes": 482,
+        "mode": "0o755",
+        "sha256": "e7dc55c5f0077f1430fdf1b3eb3886b73f2bbd9abdf6b3172ea8a530293328f2"
+      },
+      {
+        "path": "addons/6_telemetry.sh",
+        "bytes": 117,
+        "mode": "0o755",
+        "sha256": "6d0ba6416ed7e4cd2dff878a447b7035878c01fa45365e381ba47453b7f178ee"
+      },
+      {
+        "path": "addons/7_tui_dashboard.py",
+        "bytes": 157,
+        "mode": "0o755",
+        "sha256": "90658d5b85e07aeca4d5c852433caa102db6ab04ca25802c755c375ff1cdadbc"
+      },
+      {
+        "path": "addons/8_log_rotator.sh",
+        "bytes": 90,
+        "mode": "0o755",
+        "sha256": "cbc8abb6295c5eb9da656b7e6d5dd303cca03b5ebc8e5c953b18842f1a3e9cb3"
+      },
+      {
+        "path": "addons/9_network_presence.sh",
+        "bytes": 76,
+        "mode": "0o755",
+        "sha256": "c8e27fd713eed1ab2877d8299dfd22de309e4332704eb39d67223a2918b03a38"
+      },
+      {
+        "path": "app.log",
+        "bytes": 825,
+        "mode": "0o644",
+        "sha256": "3de212e2809ca866fc0b36f2bfa0c7997f4d28d633d6e8a3772e730c0794268e"
+      },
+      {
+        "path": "dashboard.py",
+        "bytes": 4393,
+        "mode": "0o644",
+        "sha256": "e75b53099efc7709603c1dbb447305ea80fd211260d9e7b83266b593e75117e3"
+      },
+      {
+        "path": "entinel Active. Monitoring $TARGET...\"",
+        "bytes": 11247,
+        "mode": "0o644",
+        "sha256": "da43d894518b605319e34560e22c290c03d3978fbf0fc41ebd99e84c240afd14"
+      },
+      {
+        "path": "entinel Start: $(date) ---\" > \"$LOG\"",
+        "bytes": 11247,
+        "mode": "0o644",
+        "sha256": "da43d894518b605319e34560e22c290c03d3978fbf0fc41ebd99e84c240afd14"
+      },
+      {
+        "path": "entinel resuming...\" | tee -a \"$LOG\"",
+        "bytes": 11247,
+        "mode": "0o644",
+        "sha256": "da43d894518b605319e34560e22c290c03d3978fbf0fc41ebd99e84c240afd14"
+      },
+      {
+        "path": "fix_git_sync.sh",
+        "bytes": 621,
+        "mode": "0o755",
+        "sha256": "542e0948d679ae2379302b740bb59d8b630df9b91001bd36adb39a9d31c4be13"
+      },
+      {
+        "path": "git_push_main.py",
+        "bytes": 4803,
+        "mode": "0o644",
+        "sha256": "5512bca64348a23f474c648566e6d12462e5eda1ba5585ea8c84d387b885dd2a"
+      },
+      {
+        "path": "install.sh",
+        "bytes": 10598,
+        "mode": "0o755",
+        "sha256": "c12688952186467a23e5f9c6334656f592bad048847adade8f176a0232e70438"
+      },
+      {
+        "path": "install_addons.sh",
+        "bytes": 4347,
+        "mode": "0o644",
+        "sha256": "f3c2dc56aa58d5e7a5d27ca666c334f45e13b3f2d2ad1ce77a96f1aa1c4ad702"
+      },
+      {
+        "path": "lib/adb.sh",
+        "bytes": 1101,
+        "mode": "0o755",
+        "sha256": "d20f70dabfd8d59ad8e5b305e996a0fc1e84345512d009bbdd9790fcadc48aea"
+      },
+      {
+        "path": "lib/common.sh",
+        "bytes": 335,
+        "mode": "0o755",
+        "sha256": "d141c4490f78523bb5f7ba54587bf267c018ec26f379a174ed8aad3743ccdbae"
+      },
+      {
+        "path": "lib/config.sh",
+        "bytes": 865,
+        "mode": "0o755",
+        "sha256": "dc7ce1d4cadcfb8de48281416cb70fcd4ccb590cd1e9015db9eb65c89b6e42ff"
+      },
+      {
+        "path": "lib/crypto.sh",
+        "bytes": 667,
+        "mode": "0o755",
+        "sha256": "296eb3474202cc3a74dd2eff2c45851a17f936938c938671606fdbdb6d724acb"
+      },
+      {
+        "path": "lib/dto.sh",
+        "bytes": 590,
+        "mode": "0o755",
+        "sha256": "75f77d1341548e6f0a00586f0be8005a50c52d48090db85b87d8ef439f3b94b6"
+      },
+      {
+        "path": "lib/idle_monitor.sh",
+        "bytes": 1387,
+        "mode": "0o755",
+        "sha256": "75e5132965dad842703719e125436ba31c68220600cabd189a8b222b74a5db70"
+      },
+      {
+        "path": "lib/monitor.sh",
+        "bytes": 2150,
+        "mode": "0o755",
+        "sha256": "5f43b60aab1882513d32831cac2ac30fd99845514e849cd7dbacb7694187d652"
+      },
+      {
+        "path": "lib/plugin.sh",
+        "bytes": 710,
+        "mode": "0o755",
+        "sha256": "de881edbc33fdb44188ee2c71c533d9a4c412d8ef24a50ad81ae48c3a693fc53"
+      },
+      {
+        "path": "lib/scheduler.sh",
+        "bytes": 1494,
+        "mode": "0o755",
+        "sha256": "08d6d1e024a68480189695f5fe504471ef150c49c8912d426967f56f36b1132e"
+      },
+      {
+        "path": "lib/termux_api.sh",
+        "bytes": 1194,
+        "mode": "0o755",
+        "sha256": "659cbc86bfd53957643ea70be745f5a9a445956fe7b196fe484e677014342474"
+      },
+      {
+        "path": "lib/timeout_wrapper.sh",
+        "bytes": 228,
+        "mode": "0o755",
+        "sha256": "cf1bd9b257a39c4cb2aa54726a34176a8c99e2cc78481b06822ce83b82c7ac22"
+      },
+      {
+        "path": "master.sh",
+        "bytes": 6379,
+        "mode": "0o755",
+        "sha256": "b8d57db59363d87e7b30a6b5a6d43100eed49ecd10d5dbdd658b93c71d5fbf99"
+      },
+      {
+        "path": "master.sh.bak",
+        "bytes": 6379,
+        "mode": "0o755",
+        "sha256": "b8d57db59363d87e7b30a6b5a6d43100eed49ecd10d5dbdd658b93c71d5fbf99"
+      },
+      {
+        "path": "nohup.out",
+        "bytes": 0,
+        "mode": "0o600",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "project.json",
+        "bytes": 4357,
+        "mode": "0o644",
+        "sha256": "cdb9e577c046a7106f88637ec3622dc9876d8badcd7e04488098784beb9fb0d9"
+      },
+      {
+        "path": "state.py",
+        "bytes": 2451,
+        "mode": "0o644",
+        "sha256": "5605d832cf2f7ddbe7e7e4f54c533d60bd83a1a62fba6b44aa0727b14fbc3873"
+      },
+      {
+        "path": "system_architect.md",
+        "bytes": 695,
+        "mode": "0o644",
+        "sha256": "ac342d1e766a0c5903b4f25edbd24ef110aef1c9966c9c19889da1989a1dba47"
+      }
+    ]
+  },
+  "shell_syntax": [
+    {
+      "path": "Vid2gif/fix_repo.sh",
+      "syntax_ok": true,
+      "stderr": "/home/droid/pixel-terminal-master/Vid2gif/fix_repo.sh: line 97: warning: here-document at line 17 delimited by end-of-file (wanted `CHANGELOGEOF')"
+    },
+    {
+      "path": "Vid2gif/vid2gif.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/10_wg_rotator.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/2_scheduler.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/3_resource_gate.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/4_archiver.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/5_dep_injector.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/6_telemetry.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/8_log_rotator.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "addons/9_network_presence.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "fix_git_sync.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "install.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "install_addons.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/adb.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/common.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/config.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/crypto.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/dto.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/idle_monitor.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/monitor.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/plugin.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/scheduler.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/termux_api.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "lib/timeout_wrapper.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    },
+    {
+      "path": "master.sh",
+      "syntax_ok": true,
+      "stderr": ""
+    }
+  ],
+  "python_syntax": [
+    {
+      "path": "Vid2gif/git_push.py",
+      "syntax_ok": true
+    },
+    {
+      "path": "addons/1_webhook.py",
+      "syntax_ok": true
+    },
+    {
+      "path": "addons/7_tui_dashboard.py",
+      "syntax_ok": true
+    },
+    {
+      "path": "dashboard.py",
+      "syntax_ok": true
+    },
+    {
+      "path": "git_push_main.py",
+      "syntax_ok": true
+    },
+    {
+      "path": "state.py",
+      "syntax_ok": true
+    }
+  ],
+  "key_files": {
+    "master.sh": {
+      "metadata": {
+        "path": "master.sh",
+        "bytes": 6379,
+        "mode": "0o755",
+        "sha256": "b8d57db59363d87e7b30a6b5a6d43100eed49ecd10d5dbdd658b93c71d5fbf99"
+      },
+      "content": "#!/bin/sh\n# Termux Master Scripts Main CLI Core\nset -eu\nMASTER_STORAGE=\"${MASTER_STORAGE:-$HOME/.termux_master}\"\nexport MASTER_STORAGE\n\n# Load Libraries\n. \"$MASTER_STORAGE/lib/common.sh\"\n. \"$MASTER_STORAGE/lib/crypto.sh\"\n. \"$MASTER_STORAGE/lib/scheduler.sh\"\n. \"$MASTER_STORAGE/lib/dto.sh\"\n. \"$MASTER_STORAGE/lib/config.sh\"\n. \"$MASTER_STORAGE/lib/termux_api.sh\"\n. \"$MASTER_STORAGE/lib/monitor.sh\"\n. \"$MASTER_STORAGE/lib/adb.sh\"\n. \"$MASTER_STORAGE/lib/plugin.sh\"\n\nensure_directories\nload_plugins\n\nVERSION=\"0.2.0\"\n\nusage() {\n    cat << EOF\nTermux Master CLI Engine v${VERSION}\n\nUsage: master.sh <command> [options]\nCommands:\n  setup                              Initialize storage & structure\n  version                            Print version\n  import <file.json>                 Import a Script DTO\n  run <script_id>                    Execute an imported script DTO\n  list                                List imported DAG script IDs\n  env set <key> <val> [1|0]          Set environment variable (1=encrypt)\n  schedule add <id> <cron> <script>  Schedule execution\n  backup create [out.tar.gz]         Snapshot framework state\n  config get|set <key> [val]         Read/write config.ini\n  monitor start|stop|status <id>     Manage watchdog supervisors\n  adb set|run|list <code> [script]   ADB intent code mapping\n  plugins list                       List loaded plugins\nEOF\n    exit 0\n}\n\nmain() {\n    [ $# -eq 0 ] && usage\n    _cmd=\"$1\"; shift\n\n    case \"$_cmd\" in\n        setup)\n            ensure_directories\n            log_info \"System configuration active at $MASTER_STORAGE\"\n            ;;\n        version)\n            printf 'termux-master-ultra %s\\n' \"$VERSION\"\n            ;;\n        import)\n            [ $# -lt 1 ] && { log_err \"Import requires JSON DTO path\"; exit 1; }\n            import_script_dto \"$1\"\n            ;;\n        run)\n            [ $# -lt 1 ] && { log_err \"Run command requires script ID\"; exit 1; }\n            _dag_id=\"$1\"\n            _script_target=\"$MASTER_STORAGE/scripts/${_dag_id}.json\"\n            if [ ! -f \"$_script_target\" ]; then\n                log_err \"Script ID '$_dag_id' not found.\"\n                exit 1\n            fi\n            _exec_cmd=$(jq -r '.command' \"$_script_target\")\n\n            _exec_id=\"$(date -u +%Y%m%dT%H%M%SZ)-$$\"\n            _log_path=\"$MASTER_STORAGE/logs/${_dag_id}_${_exec_id}.log\"\n\n            _run_id=$(python3 \"$MASTER_STORAGE/bin/state.py\" record-start \"$_dag_id\")\n            log_info \"Executing '$_dag_id' (run_id=$_run_id): $_exec_cmd\"\n            log_info \"Output log: $_log_path\"\n\n            # Guarded with if/else, not a bare command, so `set -e` doesn't\n            # kill the script on a nonzero exit before we can record it.\n            # Wrapped in a subshell ( ) so that if _exec_cmd itself contains\n            # a literal `exit N`, it only terminates the subshell — not this\n            # master.sh process, which would otherwise skip every line below.\n            if ( eval \"$_exec_cmd\" ) > \"$_log_path\" 2>&1; then\n                _exit_code=0\n                _status=\"success\"\n            else\n                _exit_code=$?\n                _status=\"failed\"\n            fi\n\n            if [ \"$_status\" = \"success\" ]; then\n                python3 \"$MASTER_STORAGE/bin/state.py\" record-finish \"$_run_id\" success\n            else\n                python3 \"$MASTER_STORAGE/bin/state.py\" record-finish \"$_run_id\" failed \"exit code $_exit_code\"\n            fi\n\n            log_info \"Run '$_dag_id' finished: status=$_status exit_code=$_exit_code\"\n            # Surface the captured output to the caller — CLI users still see\n            # it, dashboard-triggered runs (stdout/stderr sent to DEVNULL by\n            # the caller) just lose the live echo but keep the log file.\n            cat \"$_log_path\"\n            exit \"$_exit_code\"\n            ;;\n        list)\n            if [ -d \"$MASTER_STORAGE/scripts\" ]; then\n                for _f in \"$MASTER_STORAGE\"/scripts/*.json; do\n                    [ -f \"$_f\" ] || continue\n                    basename \"$_f\" .json\n                done\n            fi\n            ;;\n        env)\n            _subcmd=\"${1:-}\"\n            if [ \"$_subcmd\" = \"set\" ]; then\n                _key=\"$2\"\n                _val=\"$3\"\n                _encrypt=\"${4:-0}\"\n                if [ \"$_encrypt\" = \"1\" ]; then\n                    _val=$(encrypt_value \"$_val\")\n                    printf '%s=ENC:%s\\n' \"$_key\" \"$_val\" >> \"$MASTER_STORAGE/envs/global.env\"\n                else\n                    printf '%s=%s\\n' \"$_key\" \"$_val\" >> \"$MASTER_STORAGE/envs/global.env\"\n                fi\n                chmod 600 \"$MASTER_STORAGE/envs/global.env\"\n            fi\n            ;;\n        schedule)\n            _subcmd=\"${1:-}\"\n            if [ \"$_subcmd\" = \"add\" ]; then\n                _job_id=\"$2\"\n                _cron=\"$3\"\n                _script_id=\"$4\"\n                schedule_job \"$_job_id\" \"$_cron\" \"$MASTER_STORAGE/scripts/${_script_id}.json\"\n            fi\n            ;;\n        backup)\n            _out=\"${1:-$HOME/master-backup-$(date +%s).tar.gz}\"\n            tar -czf \"$_out\" -C \"$MASTER_STORAGE\" . --exclude=\"./.env_key\"\n            log_info \"Backup archive created at $_out\"\n            ;;\n        config)\n            _subcmd=\"${1:-}\"; shift\n            if [ \"$_subcmd\" = \"get\" ]; then\n                config_get \"$1\"\n                echo \"\"\n            elif [ \"$_subcmd\" = \"set\" ]; then\n                config_set \"$1\" \"$2\"\n                log_info \"Config updated: $1=$2\"\n            fi\n            ;;\n        monitor)\n            _subcmd=\"${1:-}\"; shift\n            case \"$_subcmd\" in\n                start) monitor_start \"$1\" \"${2:-5}\" ;;\n                stop) monitor_stop \"$1\" ;;\n                status) monitor_status \"$1\" ;;\n                *) log_err \"Unknown monitor subcommand: $_subcmd\" ;;\n            esac\n            ;;\n        adb)\n            _subcmd=\"${1:-}\"; shift\n            case \"$_subcmd\" in\n                set) adb_set_mapping \"$1\" \"$2\" ;;\n                run) adb_dispatch \"$1\" ;;\n                list) adb_list ;;\n                *) log_err \"Unknown adb subcommand: $_subcmd\" ;;\n            esac\n            ;;\n        plugins)\n            _subcmd=\"${1:-list}\"\n            if [ \"$_subcmd\" = \"list\" ]; then\n                list_plugins\n            fi\n            ;;\n        *)\n            usage\n            ;;\n    esac\n}\n\nmain \"$@\"\n"
+    },
+    "install.sh": {
+      "metadata": {
+        "path": "install.sh",
+        "bytes": 10598,
+        "mode": "0o755",
+        "sha256": "c12688952186467a23e5f9c6334656f592bad048847adade8f176a0232e70438"
+      },
+      "content": "#!/bin/sh\n# Termux Master Ultra — Installer\n# POSIX sh. Idempotent: safe to re-run. Supports Termux and plain Debian userlands.\nset -eu\n\n# ---------------------------------------------------------------------------\n# Exit code contract (matches lib/common.sh conventions)\n# ---------------------------------------------------------------------------\nEXIT_OK=0\nEXIT_GENERAL=1\nEXIT_MISSING_DEP=2\nEXIT_BAD_ARGS=3\nEXIT_MISSING_CMD=127\n\n# ---------------------------------------------------------------------------\n# Defaults (overridable via flags)\n# ---------------------------------------------------------------------------\nSCRIPT_DIR=$(CDPATH= cd -- \"$(dirname -- \"$0\")\" && pwd)\nMASTER_STORAGE=\"${MASTER_STORAGE:-$HOME/.termux_master}\"\nPREFIX=\"${PREFIX:-$HOME/bin}\"\nDRY_RUN=0\nNO_RC=0\nUNINSTALL=0\nPURGE_DATA=0\n\nRC_MARK_START=\"# >>> termux-master-ultra >>>\"\nRC_MARK_END=\"# <<< termux-master-ultra <<<\"\n\n# ---------------------------------------------------------------------------\n# Logging (falls back to plain printf if lib/common.sh isn't reachable yet)\n# ---------------------------------------------------------------------------\nif [ -f \"$SCRIPT_DIR/lib/common.sh\" ]; then\n    # shellcheck source=/dev/null\n    . \"$SCRIPT_DIR/lib/common.sh\"\nelse\n    log_msg() { _level=\"$1\"; shift; printf '[%s] %s\\n' \"$_level\" \"$*\"; }\n    log_info() { log_msg \"INFO\" \"$@\"; }\n    log_warn() { log_msg \"WARN\" \"$@\" >&2; }\n    log_err()  { log_msg \"ERROR\" \"$@\" >&2; }\nfi\n\nrun() {\n    # Wrapper so --dry-run can no-op any state-changing command uniformly.\n    if [ \"$DRY_RUN\" -eq 1 ]; then\n        printf '[dry-run] %s\\n' \"$*\"\n    else\n        \"$@\"\n    fi\n}\n\nusage() {\n    cat <<EOF\nTermux Master Ultra installer\n\nUsage: install.sh [options]\n\nOptions:\n  --prefix DIR     Install the 'master' launcher symlink into DIR (default: \\$HOME/bin)\n  --dry-run        Print what would happen without changing anything\n  --no-rc          Skip editing shell rc files (~/.bashrc, ~/.profile)\n  --uninstall      Remove the launcher symlink and rc block (data is kept)\n  --purge-data     With --uninstall, also delete \\$MASTER_STORAGE (irreversible)\n  -h, --help       Show this help\n\nEnvironment:\n  MASTER_STORAGE   Where app state lives (default: \\$HOME/.termux_master)\nEOF\n}\n\n# ---------------------------------------------------------------------------\n# Arg parsing\n# ---------------------------------------------------------------------------\nwhile [ $# -gt 0 ]; do\n    case \"$1\" in\n        --prefix)\n            [ $# -ge 2 ] || { log_err \"--prefix requires a directory argument\"; exit \"$EXIT_BAD_ARGS\"; }\n            PREFIX=\"$2\"; shift 2 ;;\n        --prefix=*)\n            PREFIX=\"${1#--prefix=}\"; shift ;;\n        --dry-run)\n            DRY_RUN=1; shift ;;\n        --no-rc)\n            NO_RC=1; shift ;;\n        --uninstall)\n            UNINSTALL=1; shift ;;\n        --purge-data)\n            PURGE_DATA=1; shift ;;\n        -h|--help)\n            usage; exit \"$EXIT_OK\" ;;\n        *)\n            log_err \"Unknown argument: $1\"\n            usage\n            exit \"$EXIT_BAD_ARGS\" ;;\n    esac\ndone\n\n# ---------------------------------------------------------------------------\n# Dependency checks\n# ---------------------------------------------------------------------------\ncheck_cmd() {\n    _cmd=\"$1\"; _hint=\"$2\"\n    if ! command -v \"$_cmd\" >/dev/null 2>&1; then\n        log_err \"Missing required dependency: $_cmd\"\n        [ -n \"$_hint\" ] && log_err \"  -> $_hint\"\n        return 1\n    fi\n    return 0\n}\n\ncheck_dependencies() {\n    _missing=0\n    check_cmd python3 \"apt install python3\" || _missing=1\n    check_cmd jq      \"apt install jq\"       || _missing=1\n    check_cmd openssl \"apt install openssl\"  || _missing=1\n\n    if command -v python3 >/dev/null 2>&1; then\n        _pyver=$(python3 -c 'import sys; print(\"%d.%d\" % sys.version_info[:2])')\n        case \"$_pyver\" in\n            3.9|3.1[0-9]|3.[2-9][0-9]) : ;;  # 3.9 through 3.99 accepted\n            *)\n                log_warn \"Python $_pyver detected; 3.9+ is assumed. Proceeding anyway.\"\n                ;;\n        esac\n    fi\n\n    if ! python3 -m venv --help >/dev/null 2>&1; then\n        log_err \"python3 -m venv is unavailable.\"\n        log_err \"  -> apt install python3-venv (or python3.X-venv matching your version)\"\n        _missing=1\n    fi\n\n    if [ \"$_missing\" -eq 1 ]; then\n        log_err \"Resolve missing dependencies above, then re-run install.sh\"\n        exit \"$EXIT_MISSING_DEP\"\n    fi\n    log_info \"All required dependencies present.\"\n}\n\n# ---------------------------------------------------------------------------\n# Directory + file layout\n# ---------------------------------------------------------------------------\nensure_storage_layout() {\n    for _dir in scripts envs schedules backups plugins bin dags logs state lib; do\n        _target=\"$MASTER_STORAGE/$_dir\"\n        if [ ! -d \"$_target\" ]; then\n            run mkdir -p \"$_target\"\n            run chmod 700 \"$_target\"\n        else\n            log_info \"Exists, skipping: $_target\"\n        fi\n    done\n}\n\ncopy_if_changed() {\n    # Idempotent copy: skip if source and dest are already identical.\n    _src=\"$1\"; _dst=\"$2\"\n    if [ -f \"$_dst\" ] && cmp -s \"$_src\" \"$_dst\" 2>/dev/null; then\n        log_info \"Unchanged, skipping: $_dst\"\n        return 0\n    fi\n    run cp \"$_src\" \"$_dst\"\n    log_info \"Installed: $_dst\"\n}\n\ninstall_app_files() {\n    [ -f \"$SCRIPT_DIR/master.sh\" ] && copy_if_changed \"$SCRIPT_DIR/master.sh\" \"$MASTER_STORAGE/bin/master.sh\"\n    if [ -f \"$MASTER_STORAGE/bin/master.sh\" ] || [ \"$DRY_RUN\" -eq 1 ]; then\n        run chmod 700 \"$MASTER_STORAGE/bin/master.sh\" 2>/dev/null || true\n    fi\n\n    if [ -d \"$SCRIPT_DIR/lib\" ]; then\n        for _f in \"$SCRIPT_DIR\"/lib/*.sh; do\n            [ -f \"$_f\" ] || continue\n            copy_if_changed \"$_f\" \"$MASTER_STORAGE/lib/$(basename \"$_f\")\"\n        done\n    fi\n\n    for _pyf in dashboard.py state.py index.html; do\n        [ -f \"$SCRIPT_DIR/$_pyf\" ] && copy_if_changed \"$SCRIPT_DIR/$_pyf\" \"$MASTER_STORAGE/bin/$_pyf\"\n    done\n}\n\n# ---------------------------------------------------------------------------\n# Python virtualenv for dashboard deps (sidesteps PEP 668 externally-managed-env)\n# ---------------------------------------------------------------------------\nsetup_venv() {\n    _venv=\"$MASTER_STORAGE/venv\"\n    if [ -x \"$_venv/bin/python3\" ]; then\n        log_info \"venv already present: $_venv\"\n    else\n        run python3 -m venv \"$_venv\"\n        log_info \"Created venv: $_venv\"\n    fi\n\n    if [ \"$DRY_RUN\" -eq 1 ]; then\n        printf '[dry-run] %s/bin/pip install --upgrade pip flask psutil\\n' \"$_venv\"\n        return 0\n    fi\n\n    \"$_venv/bin/pip\" install --quiet --upgrade pip\n    \"$_venv/bin/pip\" install --quiet flask psutil\n    log_info \"Dashboard dependencies installed into venv.\"\n}\n\n# ---------------------------------------------------------------------------\n# Launcher symlink\n# ---------------------------------------------------------------------------\ninstall_launcher() {\n    run mkdir -p \"$PREFIX\"\n    _link=\"$PREFIX/master\"\n    if [ -L \"$_link\" ] && [ \"$(readlink \"$_link\")\" = \"$MASTER_STORAGE/bin/master.sh\" ]; then\n        log_info \"Launcher already correct: $_link\"\n        return 0\n    fi\n    if [ -e \"$_link\" ] && [ ! -L \"$_link\" ]; then\n        log_err \"$_link exists and is not a symlink we manage; refusing to overwrite.\"\n        exit \"$EXIT_GENERAL\"\n    fi\n    run ln -sf \"$MASTER_STORAGE/bin/master.sh\" \"$_link\"\n    log_info \"Linked $_link -> $MASTER_STORAGE/bin/master.sh\"\n}\n\nremove_launcher() {\n    _link=\"$PREFIX/master\"\n    if [ -L \"$_link\" ]; then\n        run rm -f \"$_link\"\n        log_info \"Removed launcher: $_link\"\n    fi\n}\n\n# ---------------------------------------------------------------------------\n# Idempotent PATH export in shell rc files\n# ---------------------------------------------------------------------------\nadd_rc_block() {\n    [ \"$NO_RC\" -eq 1 ] && { log_info \"Skipping rc edits (--no-rc)\"; return 0; }\n    for _rc in \"$HOME/.bashrc\" \"$HOME/.profile\"; do\n        [ -f \"$_rc\" ] || continue\n        if grep -qF \"$RC_MARK_START\" \"$_rc\" 2>/dev/null; then\n            log_info \"PATH block already present in $_rc\"\n            continue\n        fi\n        if [ \"$DRY_RUN\" -eq 1 ]; then\n            printf '[dry-run] append PATH block to %s\\n' \"$_rc\"\n            continue\n        fi\n        {\n            printf '\\n%s\\n' \"$RC_MARK_START\"\n            printf 'export MASTER_STORAGE=\"%s\"\\n' \"$MASTER_STORAGE\"\n            printf 'case \":$PATH:\" in *\":%s:\"*) ;; *) export PATH=\"%s:$PATH\" ;; esac\\n' \"$PREFIX\" \"$PREFIX\"\n            printf '%s\\n' \"$RC_MARK_END\"\n        } >> \"$_rc\"\n        log_info \"Appended PATH block to $_rc\"\n    done\n}\n\nremove_rc_block() {\n    for _rc in \"$HOME/.bashrc\" \"$HOME/.profile\"; do\n        [ -f \"$_rc\" ] || continue\n        grep -qF \"$RC_MARK_START\" \"$_rc\" 2>/dev/null || continue\n        if [ \"$DRY_RUN\" -eq 1 ]; then\n            printf '[dry-run] remove PATH block from %s\\n' \"$_rc\"\n            continue\n        fi\n        _tmp=\"$_rc.tmp.$$\"\n        awk -v start=\"$RC_MARK_START\" -v end=\"$RC_MARK_END\" '\n            $0 == start { skip=1; next }\n            $0 == end   { skip=0; next }\n            !skip { print }\n        ' \"$_rc\" > \"$_tmp\"\n        mv \"$_tmp\" \"$_rc\"\n        log_info \"Removed PATH block from $_rc\"\n    done\n}\n\n# ---------------------------------------------------------------------------\n# Uninstall path\n# ---------------------------------------------------------------------------\ndo_uninstall() {\n    remove_launcher\n    remove_rc_block\n    if [ \"$PURGE_DATA\" -eq 1 ]; then\n        if [ \"$DRY_RUN\" -eq 1 ]; then\n            printf '[dry-run] rm -rf %s\\n' \"$MASTER_STORAGE\"\n        else\n            rm -rf \"$MASTER_STORAGE\"\n            log_info \"Purged $MASTER_STORAGE\"\n        fi\n    else\n        log_info \"Data preserved at $MASTER_STORAGE (use --purge-data to remove)\"\n    fi\n    log_info \"Uninstall complete.\"\n    exit \"$EXIT_OK\"\n}\n\n# ---------------------------------------------------------------------------\n# Main\n# ---------------------------------------------------------------------------\nif [ \"$UNINSTALL\" -eq 1 ]; then\n    do_uninstall\nfi\n\nlog_info \"Installing Termux Master Ultra\"\nlog_info \"  MASTER_STORAGE = $MASTER_STORAGE\"\nlog_info \"  PREFIX         = $PREFIX\"\n[ \"$DRY_RUN\" -eq 1 ] && log_info \"  Mode           = dry-run (no changes will be made)\"\n\ncheck_dependencies\nensure_storage_layout\ninstall_app_files\nsetup_venv\ninstall_launcher\nadd_rc_block\n\nlog_info \"Install complete.\"\nlog_info \"Run 'master setup' to finish initializing, or restart your shell to pick up PATH changes.\"\nexit \"$EXIT_OK\"\n"
+    },
+    "install_addons.sh": {
+      "metadata": {
+        "path": "install_addons.sh",
+        "bytes": 4347,
+        "mode": "0o644",
+        "sha256": "f3c2dc56aa58d5e7a5d27ca666c334f45e13b3f2d2ad1ce77a96f1aa1c4ad702"
+      },
+      "content": "#!/usr/bin/env bash\nset -e\nmkdir -p addons\n\ncat << 'EOF' > addons/1_webhook.py\nimport http.server, socketserver, subprocess\nlocal_port = 8080\nclass H(http.server.SimpleHTTPRequestHandler):\n    def do_POST(self):\n        subprocess.Popen([\"sh\", \"./master.sh\"])\n        self.send_response(200)\n        self.end_headers()\nsocketserver.TCPServer((\"\", local_port), H).serve_forever()\nEOF\n\n# Fixed: termux-job-scheduler doesn't exist outside Termux. Detects the\n# environment and uses cron on Debian/AVF, falls back to Termux's native\n# scheduler when actually running inside Termux.\ncat << 'EOF' > addons/2_scheduler.sh\n#!/usr/bin/env bash\nset -e\nPERIOD_MS=\"${1:-86400000}\"\nPERIOD_MIN=$(( PERIOD_MS / 60000 ))\n[ \"$PERIOD_MIN\" -lt 1 ] && PERIOD_MIN=1\n\nif command -v termux-job-scheduler >/dev/null 2>&1; then\n    termux-job-scheduler --script \"$PWD/master.sh\" --period-ms \"$PERIOD_MS\"\n    exit 0\nfi\n\nif command -v crontab >/dev/null 2>&1; then\n    CRON_LINE=\"*/${PERIOD_MIN} * * * * cd $PWD && ./master.sh >> $PWD/addons/scheduler.log 2>&1\"\n    ( crontab -l 2>/dev/null | grep -vF \"$PWD/master.sh\" ; echo \"$CRON_LINE\" ) | crontab -\n    echo \"Registered cron job: every ${PERIOD_MIN} min via crontab\"\n    exit 0\nfi\n\necho \"error: neither termux-job-scheduler nor crontab found\" >&2\nexit 1\nEOF\n\n# Fixed: termux-battery-status doesn't exist outside Termux. Falls back to\n# /sys/class/power_supply on plain Linux; skips the gate (exit 0, don't\n# block the pipeline) if no battery source can be found at all, since an\n# AVF VM may have no exposed battery telemetry.\ncat << 'EOF' > addons/3_resource_gate.sh\n#!/usr/bin/env bash\nset -e\nMIN_BATTERY=\"${1:-20}\"\n\nget_battery_pct() {\n    if command -v termux-battery-status >/dev/null 2>&1; then\n        termux-battery-status | grep -oP '(?<=\"percentage\": )\\d+'\n        return\n    fi\n    for supply in /sys/class/power_supply/*/capacity; do\n        [ -f \"$supply\" ] && cat \"$supply\" && return\n    done\n    echo \"\"\n}\n\nbattery_pct=$(get_battery_pct)\n\nif [ -z \"$battery_pct\" ]; then\n    echo \"warn: no battery source found, skipping gate\" >&2\n    exit 0\nfi\n\n[ \"$battery_pct\" -lt \"$MIN_BATTERY\" ] && exit 1 || exit 0\nEOF\n\ncat << 'EOF' > addons/4_archiver.sh\n#!/usr/bin/env bash\nset -e\nsqlite3 ~/.termux_master/state.db \".dump\" | gzip > addons/state_backup_$(date +%s).sql.gz\nEOF\n\n# Fixed: falls back to pkg install -y with no error handling when pkg\n# doesn't exist. Detects pkg vs apt-get vs apt and uses whichever is\n# actually present.\ncat << 'EOF' > addons/5_dep_injector.sh\n#!/usr/bin/env bash\nset -e\nBIN=\"$1\"\n[ -z \"$BIN\" ] && { echo \"usage: $0 <binary>\" >&2; exit 1; }\n\ncommand -v \"$BIN\" >/dev/null 2>&1 && exit 0\n\nif command -v pkg >/dev/null 2>&1; then\n    pkg install -y \"$BIN\"\nelif command -v apt-get >/dev/null 2>&1; then\n    sudo apt-get update -y && sudo apt-get install -y \"$BIN\"\nelif command -v apt >/dev/null 2>&1; then\n    sudo apt install -y \"$BIN\"\nelse\n    echo \"error: no supported package manager found (pkg/apt-get/apt)\" >&2\n    exit 1\nfi\nEOF\n\ncat << 'EOF' > addons/6_telemetry.sh\n#!/usr/bin/env bash\nset -e\ncurl -X POST -H \"Content-Type: application/json\" -d \"{\\\"content\\\":\\\"$1\\\"}\" \"$WEBHOOK_URL\"\nEOF\n\ncat << 'EOF' > addons/7_tui_dashboard.py\nimport curses, sqlite3\ndef main(stdscr):\n    stdscr.addstr(0, 0, \"DAG State Monitor - Active\")\n    stdscr.refresh()\n    stdscr.getkey()\ncurses.wrapper(main)\nEOF\n\ncat << 'EOF' > addons/8_log_rotator.sh\n#!/usr/bin/env bash\nset -e\nfind ~/.termux_master/logs/ -type f -mtime +7 -exec gzip {} \\;\nEOF\n\ncat << 'EOF' > addons/9_network_presence.sh\n#!/usr/bin/env bash\nset -e\nip neigh show | grep -q \"$1\" && exit 0 || exit 1\nEOF\n\n# NOTE: StrictHostKeyChecking=no is kept per the original spec (must_have:\n# \"strict host key checking disabled\"). This means an attacker who can\n# intercept this connection (rogue AP, ARP spoofing on the same LAN) can\n# swap the host key silently, with no warning shown. Fine for a trusted\n# LAN-only router with a known static IP; risky on anything else. Swap in\n# a pinned known_hosts entry instead of \"no\" if that risk isn't acceptable.\ncat << 'EOF' > addons/10_wg_rotator.sh\n#!/usr/bin/env bash\nset -e\nssh -o StrictHostKeyChecking=no root@${2:-192.168.1.1} \"/etc/init.d/network restart ${1:-wg0}\"\nEOF\n\nchmod +x addons/*.sh addons/*.py\necho \"Installed 10 addons into ./addons/ (2, 3, 5 refactored for Debian/AVF compatibility)\"\n"
+    },
+    "lib/common.sh": {
+      "metadata": {
+        "path": "lib/common.sh",
+        "bytes": 335,
+        "mode": "0o755",
+        "sha256": "d141c4490f78523bb5f7ba54587bf267c018ec26f379a174ed8aad3743ccdbae"
+      },
+      "content": "#!/bin/bash\n# Global Utilities for Pixel Terminal\n\nshutdown_gracefully() {\n    echo \"[!] Initiating graceful shutdown sequence...\"\n    # Kill background monitors\n    if [ -n \"${IDLE_MONITOR_PID:-}\" ]; then\n        kill \"$IDLE_MONITOR_PID\" 2>/dev/null || true\n    fi\n    echo \"[+] Resource gates released. System offline.\"\n    exit 0\n}\n"
+    },
+    "lib/monitor.sh": {
+      "metadata": {
+        "path": "lib/monitor.sh",
+        "bytes": 2150,
+        "mode": "0o755",
+        "sha256": "5f43b60aab1882513d32831cac2ac30fd99845514e849cd7dbacb7694187d652"
+      },
+      "content": "#!/bin/sh\n# Process Supervisor & Watchdog Daemon\nset -eu\n\nMONITOR_DIR=\"$MASTER_STORAGE/schedules/monitors\"\n\nensure_monitor_dir() {\n    if [ ! -d \"$MONITOR_DIR\" ]; then\n        mkdir -p \"$MONITOR_DIR\"\n        chmod 700 \"$MONITOR_DIR\"\n    fi\n}\n\nmonitor_start() {\n    _script_id=\"$1\"\n    _max_retries=\"${2:-5}\"\n    ensure_monitor_dir\n    _pid_file=\"$MONITOR_DIR/${_script_id}.pid\"\n    _log_file=\"$MONITOR_DIR/${_script_id}.log\"\n\n    if [ -f \"$_pid_file\" ]; then\n        _old_pid=$(cat \"$_pid_file\")\n        if kill -0 \"$_old_pid\" 2>/dev/null; then\n            log_warn \"Monitor process already active for ID '$_script_id' (PID: $_old_pid)\"\n            return 0\n        fi\n    fi\n\n    log_info \"Starting watchdog process for script: $_script_id\"\n    nohup sh -c \"\n        retry_count=0\n        while [ \\$retry_count -lt $_max_retries ]; do\n            log_info 'Watchdog spawning execution of $_script_id'\n            if master.sh run '$_script_id' >> '$_log_file' 2>&1; then\n                retry_count=0\n            else\n                retry_count=\\$((retry_count + 1))\n                log_err 'Script $_script_id failed. Retrying (\\${retry_count}/$_max_retries)...'\n                sleep \\$((retry_count * 5))\n            fi\n        done\n        log_err 'Max retries reached for $_script_id. Terminating supervisor.'\n        rm -f '$_pid_file'\n    \" >/dev/null 2>&1 &\n    _new_pid=$!\n    printf '%s' \"$_new_pid\" > \"$_pid_file\"\n    log_info \"Supervisor running for '$_script_id' under PID: $_new_pid\"\n}\n\nmonitor_stop() {\n    _script_id=\"$1\"\n    _pid_file=\"$MONITOR_DIR/${_script_id}.pid\"\n    if [ -f \"$_pid_file\" ]; then\n        _pid=$(cat \"$_pid_file\")\n        if kill \"$_pid\" 2>/dev/null; then\n            log_info \"Terminated supervisor process PID: $_pid\"\n        fi\n        rm -f \"$_pid_file\"\n    else\n        log_warn \"No active supervisor found for ID: $_script_id\"\n    fi\n}\n\nmonitor_status() {\n    _script_id=\"$1\"\n    _pid_file=\"$MONITOR_DIR/${_script_id}.pid\"\n    if [ -f \"$_pid_file\" ] && kill -0 \"$(cat \"$_pid_file\")\" 2>/dev/null; then\n        printf 'RUNNING (PID: %s)\\n' \"$(cat \"$_pid_file\")\"\n    else\n        printf 'STOPPED\\n'\n    fi\n}\n"
+    },
+    "lib/idle_monitor.sh": {
+      "metadata": {
+        "path": "lib/idle_monitor.sh",
+        "bytes": 1387,
+        "mode": "0o755",
+        "sha256": "75e5132965dad842703719e125436ba31c68220600cabd189a8b222b74a5db70"
+      },
+      "content": "#!/bin/bash\n# OPSEC: Idle state detector for terminal sessions\n# Usage: source idle_monitor.sh <timeout_minutes>\n\nIDLE_TIMEOUT_MIN=${1:-60}  # Default: 5 minutes\nIDLE_FILE=\"/tmp/pixel_terminal_idle_$$\"\nLAST_ACTIVITY_FILE=\"/tmp/pixel_terminal_last_activity_$$\"\n\n# Initialize activity timestamp\ndate +%s > \"$LAST_ACTIVITY_FILE\"\n\n# Update activity on any input\ntrap 'date +%s > \"$LAST_ACTIVITY_FILE\"' DEBUG\n\n# Idle check loop\nidle_monitor_loop() {\n    while true; do\n        sleep 10\n        local last_activity=$(cat \"$LAST_ACTIVITY_FILE\" 2>/dev/null || echo 0)\n        local current_time=$(date +%s)\n        local idle_duration=$((current_time - last_activity))\n\n        if [ \"$idle_duration\" -ge $((IDLE_TIMEOUT_MIN * 60)) ]; then\n            echo \"[!] Idle detected: $IDLE_TIMEOUT_MIN minutes of inactivity\" >&2\n            touch \"$IDLE_FILE\"\n            # Trigger graceful shutdown via master.sh\n            if [ -f \"$HOME/pixel-terminal-master/master.sh\" ]; then\n                bash -c \"source $HOME/pixel-terminal-master/lib/common.sh; shutdown_gracefully\"\n            fi\n            break\n        fi\n    done\n}\n\n# Start the monitor in background\nidle_monitor_loop &\nIDLE_MONITOR_PID=$!\nexport IDLE_MONITOR_PID\n\n# Cleanup on exit\ncleanup_idle_monitor() {\n    kill \"$IDLE_MONITOR_PID\" 2>/dev/null || true\n    rm -f \"$IDLE_FILE\" \"$LAST_ACTIVITY_FILE\"\n}\ntrap cleanup_idle_monitor EXIT\n"
+    },
+    "lib/timeout_wrapper.sh": {
+      "metadata": {
+        "path": "lib/timeout_wrapper.sh",
+        "bytes": 228,
+        "mode": "0o755",
+        "sha256": "cf1bd9b257a39c4cb2aa54726a34176a8c99e2cc78481b06822ce83b82c7ac22"
+      },
+      "content": "#!/bin/bash\n# Usage: timeout_wrapper.sh <seconds> <command>\nTIMEOUT=$1\nshift\nCMD=\"$@\"\nif ! command -v timeout &> /dev/null; then\n    echo \"[-] Error: 'timeout' utility not found.\"\n    exit 1\nfi\ntimeout \"$TIMEOUT\" bash -c \"$CMD\"\n"
+    },
+    "addons/3_resource_gate.sh": {
+      "metadata": {
+        "path": "addons/3_resource_gate.sh",
+        "bytes": 542,
+        "mode": "0o755",
+        "sha256": "5b9f6fe2dc82201e11b5bcd0901298aee51af54406c499346effee48888edcb7"
+      },
+      "content": "#!/bin/bash\n# Enhanced Resource Gate v2.0 - OPSEC Sanitized\nMIN_BATTERY=20\nMAX_LOAD=2.0\n\nbattery_pct=$(cat /sys/class/power_supply/battery/capacity 2>/dev/null || echo 100)\nif [ \"$battery_pct\" -lt \"$MIN_BATTERY\" ]; then\n    echo \"[-] Gate Closed: Battery too low ($battery_pct%)\"\n    exit 1\nfi\n\nload_avg=$(uptime | awk -F'load average:' '{ print $2 }' | cut -d, -f1 | xargs)\nif (( $(echo \"$load_avg > $MAX_LOAD\" | bc -l) )); then\n    echo \"[-] Gate Closed: CPU Load too high ($load_avg)\"\n    exit 1\nfi\necho \"[+] Resource Gate Passed.\"\nexit 0\n"
+    }
+  },
+  "security_and_behavior_audit": {
+    "patterns": {
+      "kill -9 [0-9]": {
+        "matches": [],
+        "returncode": 1
+      },
+      "kill -[0-9] [0-9]": {
+        "matches": [],
+        "returncode": 1
+      },
+      "rm -rf": {
+        "matches": [
+          "./install.sh:283:            printf '[dry-run] rm -rf %s\\n' \"$MASTER_STORAGE\"",
+          "./install.sh:285:            rm -rf \"$MASTER_STORAGE\""
+        ],
+        "returncode": 0
+      },
+      "curl | sh": {
+        "matches": [
+          "./LICENSE:12:The above copyright notice and this permission notice shall be included in all",
+          "./T_MOD=\"$CURRENT_MOD\":151:6th external browser  [curl -L -O -C - %s &]",
+          "./Vid2gif/LICENSE:12:The above copyright notice and this permission notice shall be included in all",
+          "./Vid2gif/git_push.py:4:(no shell scripting; uses subprocess to call git directly).",
+          "./Vid2gif/vid2gif.sh:90:            -i) [[ -z \"${2:-}\" ]] && die \"-i requires arg\"; INPUT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:91:            -o) [[ -z \"${2:-}\" ]] && die \"-o requires arg\"; OUTPUT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:92:            -s) [[ -z \"${2:-}\" ]] && die \"-s requires arg\"; START_TIME=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:93:            -t) [[ -z \"${2:-}\" ]] && die \"-t requires arg\"; DURATION=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:94:            -r) [[ -z \"${2:-}\" ]] && die \"-r requires arg\"; FPS=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:95:            -w) [[ -z \"${2:-}\" ]] && die \"-w requires arg\"; WIDTH=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:96:            -m) [[ -z \"${2:-}\" ]] && die \"-m requires arg\"; MAX_COLORS=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:97:            -l) [[ -z \"${2:-}\" ]] && die \"-l requires arg\"; LOOP_COUNT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:98:            -d) [[ -z \"${2:-}\" ]] && die \"-d requires arg\"; DITHER=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:99:            -p) [[ -z \"${2:-}\" ]] && die \"-p requires arg\"; apply_preset \"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:100:            -O) OPTIMIZE=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:101:            -v) VERBOSE=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:102:            -n|--dry-run) DRY_RUN=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:257:        show_dry_run",
+          "./git_push_main.py:14:    \"\"\"Execute shell command and handle error checking.\"\"\"",
+          "./entinel Active. Monitoring $TARGET...\":151:6th external browser  [curl -L -O -C - %s &]",
+          "./entinel resuming...\" | tee -a \"$LOG\":151:6th external browser  [curl -L -O -C - %s &]",
+          "./master.sh.bak:47:    _cmd=\"$1\"; shift",
+          "./master.sh.bak:142:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh.bak:152:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh.bak:161:            _subcmd=\"${1:-}\"; shift",
+          "./project.json:6:    \"description\": \"POSIX shell-based workflow orchestrator with SQLite state tracking, DAG execution, and automated CI/CD for Termux/Linux environments\",",
+          "./install_addons.sh:104:curl -X POST -H \"Content-Type: application/json\" -d \"{\\\"content\\\":\\\"$1\\\"}\" \"$WEBHOOK_URL\"",
+          "./install_addons.sh:125:ip neigh show | grep -q \"$1\" && exit 0 || exit 1",
+          "./install_addons.sh:131:# swap the host key silently, with no warning shown. Fine for a trusted",
+          "./master.sh:47:    _cmd=\"$1\"; shift",
+          "./master.sh:142:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh:152:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh:161:            _subcmd=\"${1:-}\"; shift",
+          "./install.sh:3:# POSIX sh. Idempotent: safe to re-run. Supports Termux and plain Debian userlands.",
+          "./install.sh:33:    # shellcheck source=/dev/null",
+          "./install.sh:36:    log_msg() { _level=\"$1\"; shift; printf '[%s] %s\\n' \"$_level\" \"$*\"; }",
+          "./install.sh:60:  --no-rc          Skip editing shell rc files (~/.bashrc, ~/.profile)",
+          "./install.sh:77:            PREFIX=\"$2\"; shift 2 ;;",
+          "./install.sh:79:            PREFIX=\"${1#--prefix=}\"; shift ;;",
+          "./install.sh:81:            DRY_RUN=1; shift ;;",
+          "./install.sh:83:            NO_RC=1; shift ;;",
+          "./install.sh:85:            UNINSTALL=1; shift ;;",
+          "./install.sh:87:            PURGE_DATA=1; shift ;;",
+          "./install.sh:232:# Idempotent PATH export in shell rc files",
+          "./install.sh:315:log_info \"Run 'master setup' to finish initializing, or restart your shell to pick up PATH changes.\"",
+          "./; do:151:6th external browser  [curl -L -O -C - %s &]",
+          "./README.md:70:POSIX shell execution engine, SQLite state engine, automated git deployment",
+          "./README.md:96:adb shell am start -n com.example.socialfeedapp/com.example.socialfeedapp.MainActivity",
+          "./README.md:138:    shouldFetch: (ResultType) -> Boolean = { true }",
+          "./entinel Start: $(date) ---\" > \"$LOG\":151:6th external browser  [curl -L -O -C - %s &]",
+          "./lib/monitor.sh:30:    nohup sh -c \"",
+          "./lib/common.sh:5:    echo \"[!] Initiating graceful shutdown sequence...\"",
+          "./lib/idle_monitor.sh:26:            # Trigger graceful shutdown via master.sh",
+          "./lib/idle_monitor.sh:28:                bash -c \"source $HOME/pixel-terminal-master/lib/common.sh; shutdown_gracefully\"",
+          "./addons/6_telemetry.sh:3:curl -X POST -H \"Content-Type: application/json\" -d \"{\\\"content\\\":\\\"$1\\\"}\" \"$WEBHOOK_URL\"",
+          "./addons/9_network_presence.sh:3:ip neigh show | grep -q \"$1\" && exit 0 || exit 1"
+        ],
+        "returncode": 0
+      },
+      "wget | sh": {
+        "matches": [
+          "./LICENSE:12:The above copyright notice and this permission notice shall be included in all",
+          "./T_MOD=\"$CURRENT_MOD\":152:7th external browser  [wget -c             ]",
+          "./Vid2gif/LICENSE:12:The above copyright notice and this permission notice shall be included in all",
+          "./Vid2gif/git_push.py:4:(no shell scripting; uses subprocess to call git directly).",
+          "./Vid2gif/vid2gif.sh:90:            -i) [[ -z \"${2:-}\" ]] && die \"-i requires arg\"; INPUT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:91:            -o) [[ -z \"${2:-}\" ]] && die \"-o requires arg\"; OUTPUT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:92:            -s) [[ -z \"${2:-}\" ]] && die \"-s requires arg\"; START_TIME=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:93:            -t) [[ -z \"${2:-}\" ]] && die \"-t requires arg\"; DURATION=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:94:            -r) [[ -z \"${2:-}\" ]] && die \"-r requires arg\"; FPS=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:95:            -w) [[ -z \"${2:-}\" ]] && die \"-w requires arg\"; WIDTH=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:96:            -m) [[ -z \"${2:-}\" ]] && die \"-m requires arg\"; MAX_COLORS=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:97:            -l) [[ -z \"${2:-}\" ]] && die \"-l requires arg\"; LOOP_COUNT=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:98:            -d) [[ -z \"${2:-}\" ]] && die \"-d requires arg\"; DITHER=\"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:99:            -p) [[ -z \"${2:-}\" ]] && die \"-p requires arg\"; apply_preset \"$2\"; shift 2 ;;",
+          "./Vid2gif/vid2gif.sh:100:            -O) OPTIMIZE=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:101:            -v) VERBOSE=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:102:            -n|--dry-run) DRY_RUN=1; shift ;;",
+          "./Vid2gif/vid2gif.sh:257:        show_dry_run",
+          "./git_push_main.py:14:    \"\"\"Execute shell command and handle error checking.\"\"\"",
+          "./entinel Active. Monitoring $TARGET...\":152:7th external browser  [wget -c             ]",
+          "./entinel resuming...\" | tee -a \"$LOG\":152:7th external browser  [wget -c             ]",
+          "./master.sh.bak:47:    _cmd=\"$1\"; shift",
+          "./master.sh.bak:142:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh.bak:152:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh.bak:161:            _subcmd=\"${1:-}\"; shift",
+          "./project.json:6:    \"description\": \"POSIX shell-based workflow orchestrator with SQLite state tracking, DAG execution, and automated CI/CD for Termux/Linux environments\",",
+          "./install_addons.sh:125:ip neigh show | grep -q \"$1\" && exit 0 || exit 1",
+          "./install_addons.sh:131:# swap the host key silently, with no warning shown. Fine for a trusted",
+          "./master.sh:47:    _cmd=\"$1\"; shift",
+          "./master.sh:142:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh:152:            _subcmd=\"${1:-}\"; shift",
+          "./master.sh:161:            _subcmd=\"${1:-}\"; shift",
+          "./install.sh:3:# POSIX sh. Idempotent: safe to re-run. Supports Termux and plain Debian userlands.",
+          "./install.sh:33:    # shellcheck source=/dev/null",
+          "./install.sh:36:    log_msg() { _level=\"$1\"; shift; printf '[%s] %s\\n' \"$_level\" \"$*\"; }",
+          "./install.sh:60:  --no-rc          Skip editing shell rc files (~/.bashrc, ~/.profile)",
+          "./install.sh:77:            PREFIX=\"$2\"; shift 2 ;;",
+          "./install.sh:79:            PREFIX=\"${1#--prefix=}\"; shift ;;",
+          "./install.sh:81:            DRY_RUN=1; shift ;;",
+          "./install.sh:83:            NO_RC=1; shift ;;",
+          "./install.sh:85:            UNINSTALL=1; shift ;;",
+          "./install.sh:87:            PURGE_DATA=1; shift ;;",
+          "./install.sh:232:# Idempotent PATH export in shell rc files",
+          "./install.sh:315:log_info \"Run 'master setup' to finish initializing, or restart your shell to pick up PATH changes.\"",
+          "./; do:152:7th external browser  [wget -c             ]",
+          "./README.md:70:POSIX shell execution engine, SQLite state engine, automated git deployment",
+          "./README.md:96:adb shell am start -n com.example.socialfeedapp/com.example.socialfeedapp.MainActivity",
+          "./README.md:138:    shouldFetch: (ResultType) -> Boolean = { true }",
+          "./entinel Start: $(date) ---\" > \"$LOG\":152:7th external browser  [wget -c             ]",
+          "./lib/monitor.sh:30:    nohup sh -c \"",
+          "./lib/common.sh:5:    echo \"[!] Initiating graceful shutdown sequence...\"",
+          "./lib/idle_monitor.sh:26:            # Trigger graceful shutdown via master.sh",
+          "./lib/idle_monitor.sh:28:                bash -c \"source $HOME/pixel-terminal-master/lib/common.sh; shutdown_gracefully\"",
+          "./addons/9_network_presence.sh:3:ip neigh show | grep -q \"$1\" && exit 0 || exit 1"
+        ],
+        "returncode": 0
+      },
+      "eval ": {
+        "matches": [
+          "./master.sh.bak:83:            if ( eval \"$_exec_cmd\" ) > \"$_log_path\" 2>&1; then",
+          "./master.sh:83:            if ( eval \"$_exec_cmd\" ) > \"$_log_path\" 2>&1; then"
+        ],
+        "returncode": 0
+      },
+      "nohup ": {
+        "matches": [
+          "./lib/monitor.sh:30:    nohup sh -c \""
+        ],
+        "returncode": 0
+      },
+      "pkill ": {
+        "matches": [],
+        "returncode": 1
+      }
+    },
+    "hardcoded_pid_check": {
+      "command": "grep -RInE 'kill -9 [0-9]+' --exclude-dir=.git .",
+      "clean": true,
+      "matches": []
+    },
+    "idle_monitor_processes": [],
+    "idle_monitor_tail_reversed": [
+      "trap cleanup_idle_monitor EXIT",
+      "}",
+      "    rm -f \"$IDLE_FILE\" \"$LAST_ACTIVITY_FILE\"",
+      "    kill \"$IDLE_MONITOR_PID\" 2>/dev/null || true",
+      "cleanup_idle_monitor() {",
+      "# Cleanup on exit",
+      "",
+      "export IDLE_MONITOR_PID",
+      "IDLE_MONITOR_PID=$!",
+      "idle_monitor_loop &",
+      "# Start the monitor in background",
+      "",
+      "}",
+      "    done",
+      "        fi",
+      "            break",
+      "            fi",
+      "                bash -c \"source $HOME/pixel-terminal-master/lib/common.sh; shutdown_gracefully\"",
+      "            if [ -f \"$HOME/pixel-terminal-master/master.sh\" ]; then",
+      "            # Trigger graceful shutdown via master.sh",
+      "            touch \"$IDLE_FILE\"",
+      "            echo \"[!] Idle detected: $IDLE_TIMEOUT_MIN minutes of inactivity\" >&2",
+      "        if [ \"$idle_duration\" -ge $((IDLE_TIMEOUT_MIN * 60)) ]; then",
+      "",
+      "        local idle_duration=$((current_time - last_activity))"
+    ],
+    "bashrc": {
+      "path": "/home/droid/.bashrc",
+      "exists": true,
+      "syntax_ok": true,
+      "stderr": ""
+    }
+  },
+  "known_state": {
+    "completed": [
+      "lib/idle_monitor.sh contains an active cleanup_idle_monitor EXIT trap",
+      "No hardcoded numeric PID matched the audited kill -9 pattern",
+      "Local main branch was pushed successfully to origin/main in the reported session"
+    ],
+    "warnings": [
+      "The shell prompt is currently operating from ~; use git -C ~/pixel-terminal-master for Git commands.",
+      "The repository may contain untracked nohup.out or other generated artifacts.",
+      "The .bashrc previously emitted malformed escape text and must remain syntax-valid.",
+      "Do not commit credentials, tokens, private keys, or diagnostic files containing secrets."
+    ],
+    "reported_remote_push": {
+      "result": "success",
+      "remote": "origin",
+      "branch": "main",
+      "reported_remote_head": "1387f271e15eaeb1adf5ebd373ffd533480a203b"
+    }
+  },
+  "recommended_next_actions": [
+    "Review this HANDOVER.json for accidental sensitive data before committing it.",
+    "Run: git -C ~/pixel-terminal-master status --short --branch",
+    "Run: bash -n ~/.bashrc",
+    "Run: bash -n ~/pixel-terminal-master/lib/idle_monitor.sh",
+    "Run: git -C ~/pixel-terminal-master diff --check",
+    "Remove generated artifacts only after confirming they are not needed.",
+    "Commit and push HANDOVER.json only if repository policy permits it."
+  ],
+  "reproduction_commands": {
+    "enter_repo": "cd ~/pixel-terminal-master",
+    "status": "git -C ~/pixel-terminal-master status --short --branch",
+    "verify_head": "git -C ~/pixel-terminal-master rev-parse HEAD",
+    "verify_shell": "find ~/pixel-terminal-master -name '*.sh' -type f -exec bash -n {} \\;",
+    "verify_python": "find ~/pixel-terminal-master -name '*.py' -type f -exec python3 -m py_compile {} \\;",
+    "verify_diff": "git -C ~/pixel-terminal-master diff --check",
+    "push": "git -C ~/pixel-terminal-master push origin main"
+  }
+}
